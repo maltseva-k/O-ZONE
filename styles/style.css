@@ -1,0 +1,6 @@
+@import "eesti.css";
+
+* {
+    font-family: 'Eesti', sans-serif;
+    font-weight: 400;
+}

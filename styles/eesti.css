@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "GTEestiProText";
+    src: url("./fonts/GT-Eesti-Pro-Text-Regular.OTF") format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "GTEestiProText";
+    src: url("./fonts/GT-Eesti-Pro-Text-Medium.OTF") format("opentype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "GTEestiProText";
+    src: url("./fonts/GT-Eesti-Pro-Text-Bold.OTF") format("opentype");
+    font-weight: 700;
+}
+
