@@ -1,4 +1,5 @@
 @import "eesti.css";
+@import "~normalize.css";
 
 * {
     font-family: 'Eesti', sans-serif;
