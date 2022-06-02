@@ -1,3 +1,8 @@
 import getData from './modules/getData'
+import renderGoods from './modules/renderGoods'
 
-getData()
+getData().then((data)=> {
+    renderGoods(data)
+})
+
+
