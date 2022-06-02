@@ -16,7 +16,17 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_getData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/getData */ \"./src/modules/getData.js\");\n/* harmony import */ var _modules_renderGoods__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/renderGoods */ \"./src/modules/renderGoods.js\");\n/* harmony import */ var _modules_searchGoods__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/searchGoods */ \"./src/modules/searchGoods.js\");\n\r\n\r\n\r\n\r\n(0,_modules_getData__WEBPACK_IMPORTED_MODULE_0__[\"default\"])().then((data)=> {\r\n    (0,_modules_renderGoods__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(data)\r\n})\r\n\r\n;(0,_modules_searchGoods__WEBPACK_IMPORTED_MODULE_2__[\"default\"])()\r\n\r\n\n\n//# sourceURL=webpack://O-ZONE/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_getData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/getData */ \"./src/modules/getData.js\");\n/* harmony import */ var _modules_renderGoods__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/renderGoods */ \"./src/modules/renderGoods.js\");\n/* harmony import */ var _modules_searchGoods__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/searchGoods */ \"./src/modules/searchGoods.js\");\n/* harmony import */ var _modules_catalog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/catalog */ \"./src/modules/catalog.js\");\n\r\n\r\n\r\n\r\n\r\n(0,_modules_getData__WEBPACK_IMPORTED_MODULE_0__[\"default\"])().then((data)=> {\r\n    (0,_modules_renderGoods__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(data)\r\n})\r\n\r\n;(0,_modules_searchGoods__WEBPACK_IMPORTED_MODULE_2__[\"default\"])()\r\n;(0,_modules_catalog__WEBPACK_IMPORTED_MODULE_3__[\"default\"])()\r\n\r\n\n\n//# sourceURL=webpack://O-ZONE/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/catalog.js":
+/*!********************************!*\
+  !*** ./src/modules/catalog.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst catalog = () => {\r\n    const catalogBtn = document.querySelector('.catalog-button')\r\n    const catalogModal = document.querySelector('.catalog')\r\n\r\n    let isModalOpen = false\r\n    catalogBtn.addEventListener('click', () => {\r\n\r\n        if (isModalOpen) {\r\n            catalogModal.style.display = 'none'\r\n        } else {\r\n            catalogModal.style.display = 'block'\r\n        }\r\n        isModalOpen = !isModalOpen\r\n    })\r\n\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (catalog);\r\n\n\n//# sourceURL=webpack://O-ZONE/./src/modules/catalog.js?");
 
 /***/ }),
 
