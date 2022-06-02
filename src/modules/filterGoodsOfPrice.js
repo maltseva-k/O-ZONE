@@ -8,33 +8,33 @@ const filterGoodsOfPrice = () => {
 
     minInput.addEventListener('input', () => {
         getData().then((data) => {
-            renderGoods(priceFilter(data, minInput.value, maxInput.value))
+            renderGoods(priceFilter(hotSaleFilter(data, checkboxInput.checked), minInput.value, maxInput.value))
         })
     })
     maxInput.addEventListener('input', () => {
         getData().then((data) => {
-            renderGoods(priceFilter(data, minInput.value, maxInput.value))
+            renderGoods(priceFilter(hotSaleFilter(data, checkboxInput.checked), minInput.value, maxInput.value))
         })
     })
 
-}
 
-const checkboxInput = document.getElementById('discount-checkbox')
-const checkboxSpan = document.querySelector('.filter-check_checkmark')
+    const checkboxInput = document.getElementById('discount-checkbox')
+    const checkboxSpan = document.querySelector('.filter-check_checkmark')
 
-checkboxInput.addEventListener('change', () => {
+    checkboxInput.addEventListener('change', () => {
 
-    if (checkboxInput.checked) {
-        checkboxSpan.classList.add('checked')
-    } else {
-        checkboxSpan.classList.remove('checked')
-    }
+        if (checkboxInput.checked) {
+            checkboxSpan.classList.add('checked')
+        } else {
+            checkboxSpan.classList.remove('checked')
+        }
 
-    getData().then((data) => {
-        renderGoods(hotSaleFilter(data, checkboxInput.checked))
+        getData().then((data) => {
+            renderGoods(hotSaleFilter(priceFilter(data, minInput.value, maxInput.value), checkboxInput.checked))
+        })
+
     })
-
-})
+}
 
 
 export default filterGoodsOfPrice
