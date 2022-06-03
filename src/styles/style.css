@@ -218,7 +218,6 @@ body {
   width: 33%;
   position: relative;
 }
-
 .card-img-wrapper {
   position: relative;
   display: -webkit-box;
@@ -230,7 +229,6 @@ body {
   padding: 10px;
   box-sizing: border-box;
 }
-
 .card-img-top {
   position: absolute;
   top: 0;
@@ -246,7 +244,6 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
-
 .card-sale {
   position: absolute;
   top: 10px;
@@ -260,7 +257,6 @@ body {
   margin-right: 8px;
   z-index: 111;
 }
-
 .card-title {
   padding-left: 10px;
   padding-right: 10px;
@@ -272,7 +268,6 @@ body {
   position: relative;
   z-index: 4;
 }
-
 .card-body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -282,7 +277,6 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-
 .card-price {
   padding-left: 10px;
   padding-right: 10px;
@@ -292,6 +286,7 @@ body {
 }
 
 .btn {
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -302,7 +297,6 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  min-height: 27px;
   line-height: 1.17;
   position: relative;
   -webkit-box-sizing: border-box;
@@ -313,9 +307,9 @@ body {
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-  border: 1px solid transparent;
   border-radius: 2px;
   -webkit-transition: all 0.08s ease-in-out;
+  -o-transition: all 0.08s ease-in-out;
   transition: all 0.08s ease-in-out;
   -webkit-user-select: none;
   -moz-user-select: none;
