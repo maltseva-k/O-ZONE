@@ -1,12 +1,14 @@
 const renderGoods = (goods) => {
     const goodsWrapper = document.querySelector('.goods_wrapper')
 
+    localStorage.setItem('goods', JSON.stringify(goods))
+
     goodsWrapper.innerHTML = ''
 
     goods.forEach((goodsItem) => {
 
         goodsWrapper.insertAdjacentHTML('beforeend',
-            `<div class="card">
+            `<div class="card" data-key="${goodsItem.id}">
                     ${goodsItem.sale ? '<div class="card-sale">🔥Hot Sale🔥</div>' : ''}
                     <div class="card-img-wrapper">
                         <span class="card-img-top"
