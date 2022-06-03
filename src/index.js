@@ -5,6 +5,7 @@ import catalog from "./modules/catalog";
 import cartModal from './modules/cartModal'
 import filterGoodsOfPrice from './modules/filterGoodsOfPrice'
 import addToCart from "./modules/addToCart";
+import deleteOfCart from "./modules/deleteOfCart";
 
 getData().then((data)=> {
     renderGoods(data)
@@ -15,3 +16,4 @@ catalog()
 cartModal()
 filterGoodsOfPrice()
 addToCart()
+deleteOfCart()
