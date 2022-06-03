@@ -13,7 +13,17 @@ const addToCart = () => {
             const goodItem = goods.find((item) => {
                 return item.id === +key
             })
-            cart.push(goodItem)
+
+            const dubble = cart.find((item) => {
+                return item.id === goodItem.id
+            })
+            if (dubble == undefined) {
+                goodItem.quant = 1
+                cart.push(goodItem)
+            } else {
+                dubble.quant += 1
+            }
+
             localStorage.setItem('cart', JSON.stringify(cart))
 
             goodsCounter()

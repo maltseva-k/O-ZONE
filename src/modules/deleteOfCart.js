@@ -13,16 +13,20 @@ const deleteOfCart = () => {
             const index = cart.findIndex((item) => {
                 return item.id === +key
             })
-            console.log(index)
+            if (cart[index].quant > 1) {
+                cart[index].quant --
+            } else {
+                cart.splice(index, 1)
+            }
 
-            cart.splice(index, 1)
+
 
             localStorage.setItem('cart', JSON.stringify(cart))
 
             renderCart(cart)
 
             cartTotal.textContent = cart.reduce((sum, goodItem) => {
-                return sum + goodItem.price
+                return sum + (goodItem.price * goodItem.quant)
             }, 0)
             goodsCounter()
         }

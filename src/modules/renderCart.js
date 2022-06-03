@@ -1,6 +1,7 @@
 const renderCart = (goods) => {
     const cartWrapper = document.querySelector('.cart-wrapper')
 
+
     cartWrapper.innerHTML = ''
 
     if (goods.length === 0) {
@@ -13,8 +14,8 @@ const renderCart = (goods) => {
     } else {
         goods.forEach((goodsItem) => {
 
-            cartWrapper.insertAdjacentHTML('beforeend',
-                `<div class="card" data-key="${goodsItem.id}">
+                cartWrapper.insertAdjacentHTML('beforeend',
+                    `<div class="card" data-key="${goodsItem.id}">
                     ${goodsItem.sale ? '<div class="card-sale">🔥Hot Sale🔥</div>' : ''}
                     <div class="card-img-wrapper">
                         <span class="card-img-top"
@@ -23,11 +24,17 @@ const renderCart = (goods) => {
                     </div>
                     <div class="card-body justify-content-between">
                         <div class="card-price">${goodsItem.price} ₽</div>
+                        <div class="card-price">${goodsItem.quant} шт</div>
                         <h5 class="card-title">${goodsItem.title}</h5>
+                        
                         <button class="btn btn-primary">Удалить</button>
                     </div>
                 </div>
-        `)
+                `)
+
+
+
+
         })
     }
 

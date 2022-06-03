@@ -19,7 +19,7 @@ const cartModal = () => {
 
         renderCart(cart)
         cartTotal.textContent = cart.reduce((sum, goodItem) => {
-            return sum + goodItem.price
+            return sum + (goodItem.price * goodItem.quant)
         }, 0)
     })
 
