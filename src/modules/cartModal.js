@@ -1,9 +1,11 @@
 import renderCart from "./renderCart";
+import postOrder from "./postOrder";
 
 const cartModal = () => {
     const cartBtn = document.querySelector('#cart')
     const modalCart = document.querySelector('.cart')
     const closeModalBtn = document.querySelector('.cart-close')
+    const postOrderBtn = document.querySelector('.cart-confirm')
 
     const cartTotal = document.querySelector('.cart-total > span')
 
@@ -30,6 +32,17 @@ const cartModal = () => {
                 modalCart.style.display = 'none'
                 isCartModalOpen = false
             }
+    })
+
+    postOrderBtn.addEventListener('click', () => {
+        const cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
+        postOrder(cart).then(() => {
+            localStorage.removeItem('cart')
+
+            renderCart([])
+
+            cartTotal.textContent = 0
+        })
     })
 
 
