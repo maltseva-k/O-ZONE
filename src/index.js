@@ -6,6 +6,7 @@ import cartModal from './modules/cartModal'
 import filterGoodsOfPrice from './modules/filterGoodsOfPrice'
 import addToCart from "./modules/addToCart";
 import deleteOfCart from "./modules/deleteOfCart";
+import goodsCounter from "./modules/goodsCounter";
 
 getData().then((data)=> {
     renderGoods(data)
@@ -17,3 +18,4 @@ cartModal()
 filterGoodsOfPrice()
 addToCart()
 deleteOfCart()
+goodsCounter()

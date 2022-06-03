@@ -1,3 +1,6 @@
+import renderCart from "./renderCart";
+import goodsCounter from "./goodsCounter";
+
 const addToCart = () => {
     const goodsWrapper = document.querySelector('#goods')
 
@@ -12,7 +15,10 @@ const addToCart = () => {
             })
             cart.push(goodItem)
             localStorage.setItem('cart', JSON.stringify(cart))
+
+            goodsCounter()
         }
+
     })
 }
 

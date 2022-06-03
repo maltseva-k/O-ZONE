@@ -1,4 +1,5 @@
 import renderCart from "./renderCart";
+import goodsCounter from "./goodsCounter";
 
 const deleteOfCart = () => {
     const cartWrapper = document.querySelector('.cart')
@@ -18,6 +19,7 @@ const deleteOfCart = () => {
             localStorage.setItem('cart', JSON.stringify(cart))
 
             renderCart(cart)
+            goodsCounter()
         }
     })
 
