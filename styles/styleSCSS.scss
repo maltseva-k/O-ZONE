@@ -24,10 +24,11 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: 30px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding-bottom: 30px;
 
 }
 .logo {
@@ -44,7 +45,7 @@ body {
   padding: 0 10px;
   margin-right: 15px;
     width: 118px;
-    height: 40px;
+    height: 39px;
     border-radius: 3px;
     background-color: #005bff;
     color: #fff;
@@ -81,53 +82,55 @@ body {
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    height: 40px;
+    height: 39px;
     width: 100%;
-  display: flex;
-  justify-content: space-between;
-
-  &_input {
-    width: 100%;
-    height: 100%;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0 0 0 8px;
-    border: 1px solid transparent;
-    font-size: 14px;
-    font-family: GTEestiProText, Arial, sans-serif;
-    color: #001a34;
-    line-height: 18px;
-    outline: none;
-    vertical-align: middle;
-    border-radius: 2px 0 0 2px;
-    text-overflow: ellipsis;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
     flex-grow: 1;
-  }
-  &_btn {
-    cursor: pointer;
-    align-items: center;
-    height: 101%;
-    max-width: 76px;
-    width: 100%;
-    background-color: #005bff;
-    border: none;
-    padding: 0;
-    &:hover {
-      color: #fff;
-      background-color: #004ed6;
+    &_input {
+      width: 100%;
+      height: 100%;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      border: none;
+      padding: 0 0 0 8px;
+      margin: 0;
+      font-size: 14px;
+      font-family: GTEestiProText, Arial, sans-serif;
+      color: #001a34;
+      line-height: 18px;
+      outline: none;
+      vertical-align: middle;
+      border-radius: 2px 0 0 2px;
+      text-overflow: ellipsis;
+      -webkit-box-shadow: none;
+      box-shadow: none;
     }
-  &::before {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 24px;
-    height: 24px;
-    color: #fff;
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='%23fff' d='M9.996 17.991a7.996 7.996 0 117.995-7.995 1 1 0 01-2 0 5.996 5.996 0 10-1.756 4.24l.707-.708 7.115 7.115a1 1 0 01-1.414 1.414l-5.745-5.745a7.967 7.967 0 01-4.902 1.68z'/%3E%3C/svg%3E");
-  }
+    &_btn {
+      cursor: pointer;
+      align-self: start;
+      height: 100%;
+      max-width: 76px;
+      width: 100%;
+      background-color: #005bff;
+      border: none;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      &:hover {
+        color: #fff;
+        background-color: #004ed6;
+      }
+    &::before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 24px;
+      height: 24px;
+      color: #fff;
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='%23fff' d='M9.996 17.991a7.996 7.996 0 117.995-7.995 1 1 0 01-2 0 5.996 5.996 0 10-1.756 4.24l.707-.708 7.115 7.115a1 1 0 01-1.414 1.414l-5.745-5.745a7.967 7.967 0 01-4.902 1.68z'/%3E%3C/svg%3E");
+    }
 
   }
 
@@ -208,20 +211,21 @@ body {
 }
 
 .filter_wrapper {
-  width: 30%;
+  width: 20%;
 }
 
 .goods_wrapper {
-  width: 70%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .card {
   border: 1px solid #ededed;
   border-radius: 0;
-  width: 33%;
+  width: 31%;
   position: relative;
 
   &-img-wrapper {
