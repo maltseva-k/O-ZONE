@@ -19,3 +19,5 @@ filterGoodsOfPrice()
 addToCart()
 deleteOfCart()
 goodsCounter()
+
+localStorage.setItem('searchResult', JSON.stringify([]))

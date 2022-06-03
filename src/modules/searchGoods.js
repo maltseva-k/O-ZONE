@@ -6,11 +6,17 @@ const searchGoods = () => {
     const searchInput = document.querySelector('.search_input')
 
     searchInput.addEventListener('input', (event) => {
+        const minInput = document.querySelector('#min')
+        const maxInput = document.querySelector('#max')
+        minInput.value=''
+        maxInput.value=''
+
         const value = event.target.value
-        console.log(value)
 
         getData().then((data) => {
-            renderGoods(searchFilter(data, value))
+            let goods = searchFilter(data, value)
+            localStorage.setItem('searchResult', JSON.stringify(goods))
+            renderGoods(goods)
         })
     })
 
