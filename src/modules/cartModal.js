@@ -1,5 +1,6 @@
 import renderCart from "./renderCart";
 import postOrder from "./postOrder";
+import goodsCounter from "./goodsCounter";
 
 const cartModal = () => {
     const cartBtn = document.querySelector('#cart')
@@ -42,6 +43,7 @@ const cartModal = () => {
             renderCart([])
 
             cartTotal.textContent = 0
+            goodsCounter()
         })
     })
 
