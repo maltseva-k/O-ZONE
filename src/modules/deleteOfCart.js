@@ -3,6 +3,7 @@ import goodsCounter from "./goodsCounter";
 
 const deleteOfCart = () => {
     const cartWrapper = document.querySelector('.cart')
+    const cartTotal = document.querySelector('.cart-total > span')
 
     cartWrapper.addEventListener('click', (event) => {
         if (event.target.classList.contains('btn-primary')) {
@@ -19,6 +20,10 @@ const deleteOfCart = () => {
             localStorage.setItem('cart', JSON.stringify(cart))
 
             renderCart(cart)
+
+            cartTotal.textContent = cart.reduce((sum, goodItem) => {
+                return sum + goodItem.price
+            }, 0)
             goodsCounter()
         }
     })
