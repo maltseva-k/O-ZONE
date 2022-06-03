@@ -5,6 +5,8 @@ const cartModal = () => {
     const modalCart = document.querySelector('.cart')
     const closeModalBtn = document.querySelector('.cart-close')
 
+    const cartTotal = document.querySelector('.cart-total > span')
+
     let isCartModalOpen = false
 
     cartBtn.addEventListener('click', () => {
@@ -13,6 +15,9 @@ const cartModal = () => {
         isCartModalOpen = true
 
         renderCart(cart)
+        cartTotal.textContent = cart.reduce((sum, goodItem) => {
+            return sum + goodItem.price
+        }, 0)
     })
 
     closeModalBtn.addEventListener('click', () => {
