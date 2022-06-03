@@ -1,3 +1,5 @@
+import renderCart from "./renderCart";
+
 const cartModal = () => {
     const cartBtn = document.querySelector('#cart')
     const modalCart = document.querySelector('.cart')
@@ -6,8 +8,11 @@ const cartModal = () => {
     let isCartModalOpen = false
 
     cartBtn.addEventListener('click', () => {
+        const cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
         modalCart.style.display = 'flex'
         isCartModalOpen = true
+
+        renderCart(cart)
     })
 
     closeModalBtn.addEventListener('click', () => {
