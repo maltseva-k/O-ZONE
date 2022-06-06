@@ -10,6 +10,12 @@ const searchGoods = () => {
         const maxInput = document.querySelector('#max')
         minInput.value=''
         maxInput.value=''
+        const checkboxInput = document.getElementById('discount-checkbox')
+        const checkboxSpan = document.querySelector('.filter-check_checkmark')
+
+        checkboxInput.checked = false
+        checkboxSpan.classList.remove('checked')
+
 
         const value = event.target.value
 
