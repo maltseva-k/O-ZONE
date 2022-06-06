@@ -408,8 +408,8 @@ body {
 
   &-wrapper {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /*justify-content: center;*/
     margin: 25px 0;
     border: 1px solid #4d5f713f;
     border-radius: 3px;
@@ -418,6 +418,7 @@ body {
     #cart-empty {
       font-size: 24px;
       color: #4d5f71;
+      text-align: center;
     }
 
     .card {
@@ -579,3 +580,70 @@ body {
     }
   }
 }
+
+.cardincart {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ededed;
+  border-radius: 0;
+  width: 100%;
+  position: relative;
+  padding: 15px;
+  box-sizing: border-box;
+
+  &-img-wrapper {
+    width: 30%;
+    position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 0;
+      height: 200px;
+
+      box-sizing: border-box;
+  }
+
+    &-img-top {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 230px;
+      margin: auto;
+      max-width: 200px;
+      max-height: 200px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    &-body {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-price {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+    }
+  &-title {
+    font-size: 16px;
+    line-height: 1.38;
+    font-weight: 700;
+    width: 50%;
+    overflow: auto;
+
+  }
+  &-sum {
+    font-size: 16px;
+    line-height: 1.38;
+    font-weight: 700;
+  }
+}
+
+
+

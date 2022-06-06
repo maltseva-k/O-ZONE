@@ -8,7 +8,7 @@ const deleteOfCart = () => {
     cartWrapper.addEventListener('click', (event) => {
         if (event.target.classList.contains('btn-primary')) {
             const cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
-            const card = event.target.closest('.card')
+            const card = event.target.closest('.cardincart')
             const key = card.dataset.key
             const index = cart.findIndex((item) => {
                 return item.id === +key
