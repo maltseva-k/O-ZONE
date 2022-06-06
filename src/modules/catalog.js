@@ -1,6 +1,6 @@
 import getData from "./getData";
 import renderGoods from "./renderGoods";
-import { categoryFilter } from "./filters"
+import {categoryFilter, searchFilter} from "./filters"
 
 const catalog = () => {
     const catalogBtn = document.querySelector('.catalog-button')
@@ -23,7 +23,9 @@ const catalog = () => {
             const category = categoryItem.textContent
 
             getData().then((data) => {
-                renderGoods(categoryFilter(data, category))
+                let goods = categoryFilter(data, category)
+                localStorage.setItem('searchResult', JSON.stringify(goods))
+                renderGoods(goods)
             })
         })
 
